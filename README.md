@@ -25,4 +25,6 @@ Aplikacja ma na celu realizację obliczeń nasłonecznienia
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Acknowledgments
+This plugin present the result of the Project no 019/ZII/2024/POT financed from the subsidy granted to the Krakow University of
+Economics
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
