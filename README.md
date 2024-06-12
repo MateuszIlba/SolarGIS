@@ -22,6 +22,7 @@ Aplikacja ma na celu realizację obliczeń nasłonecznienia
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
+Mateusz Ilba - ilbam@uek.krakow.pl
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Acknowledgments
