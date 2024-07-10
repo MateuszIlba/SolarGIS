@@ -5,7 +5,7 @@
 
 ## About The Project
 
-Aplikacja ma na celu realizację obliczeń nasłonecznienia
+Aplikacja ma na celu realizację obliczeń nasłonecznienia. W wersji 1.0 aplikacji stosowane są korekcje nasłonecznienia ze względu na pochylenie płaszczyzny 
 
 ### Built With
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
