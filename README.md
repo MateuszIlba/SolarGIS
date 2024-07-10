@@ -37,17 +37,22 @@ Aby zainstalować plugin należy otworzyć okno Processing Toolbox i otworzyć s
 Skrypt aplikacji będzie widoczny w zakładce Scripts:<br><br>
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/8dfe83c6-0e0f-42d2-bc25-a99125849560)<br><br>
 Po dodaniu skrytpu Python można uruchomić aplikację klikając dwyukrotnie na nazwę SolarGIS
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
-![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/6abd2d56-1498-4245-90d5-5f45b2aa501d)
+
+Po otwarciu aplikacji uruchamia się GUI w którym można ustawić parametry analizy:<br><br>
+![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/6abd2d56-1498-4245-90d5-5f45b2aa501d)<br><br>
+Główne ustawienia aplikacji:
+<ul>
+  <li>'Input layer' - warstwa w obrębie której będzie odbywała się analiza </li>
+</ul>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
-Aplikacja udostępniana jest na podstawie licencji GNU General Public License v2.0
+Distributed under the GNU General Public License v2.0. See file LICENSE for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
