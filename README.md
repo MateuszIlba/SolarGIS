@@ -5,7 +5,15 @@
 
 ## About The Project
 
-Aplikacja ma na celu realizację obliczeń nasłonecznienia na podstawie dowolnych danych przestrzennych w środowisku QGIS. W wersji 1.0 aplikacji stosowane są korekcje nasłonecznienia ze względu na pochylenie płaszczyzny i lokalizację. 
+Aplikacja ma na celu realizację obliczeń nasłonecznienia na podstawie dowolnych danych przestrzennych 3D oraz danych pogodowych (w formacie EPW) w środowisku QGIS. Aplikacja działa w środowisku otwartego oprogramowania QGIS. W wersji 1.0 aplikacji stosowane są korekcje nasłonecznienia uwzględniające pochylenie płaszczyzny i jej azymut. Aplikacja umożliwia również obliczenie realnej powierzchni danej płaszczyzny 3D. <br>
+Główne cechy aplikacji:<br>
+<ul>
+  <li>obliczanie realnego nasłonecznienia płaszczyzny na podstawie danych pogodowych (EPW)</li>
+  <li>skalowalność obliczeń dla dowolnej liczby płaszczyzn</li>
+  <li>uwzględnianie w obliczeniach korekcji dla trzech składowych nasłonecznienia: bezpośredniego, rozproszonego oraz odbitego</li>
+  <li>możliwość dowolnej wizualizacji wyników a trakże możliwość eksportu obliczeń do dowolnego pliku obsługiwanego przez QGIS</li>
+</ul><br>
+W wersji 2.0 aplikacji planowane jest dodanie mozliwości podziału płaszczyzn poprzez zdefiniowaną siatkę oraz uwzględnianie zacienienia (przez numeryczny model pokrycia terenu oraz sąsiadujące obiekty 3D).
 
 ### Built With
 
@@ -19,6 +27,9 @@ Aplikacja wykorzystuje biblioteki:
 
 ## Getting Started
 ### Prerequisites
+
+W celu uruchomienia apllikacji wymagana jest instalacja aplikacji QGIS w wersji 3.34 lub nowszej. Najnowszą wersję można pobrać <a href="https://qgis.org/en/site/forusers/download.html">z tej strony</a>
+
 ### Installation
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
