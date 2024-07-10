@@ -45,7 +45,7 @@ Po otwarciu aplikacji uruchamia się GUI w którym można ustawić parametry ana
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/6abd2d56-1498-4245-90d5-5f45b2aa501d)<br><br>
 Główne ustawienia aplikacji:
 <ul>
-  <li>'Input layer' - warstwa w obrębie której będzie odbywała się analiza </li>
+  <li>`Input layer` - warstwa w obrębie której będzie odbywała się analiza </li>
 </ul>
 
 
