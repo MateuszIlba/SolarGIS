@@ -9,10 +9,12 @@ Aplikacja ma na celu realizację obliczeń nasłonecznienia na podstawie dowolny
 
 ### Built With
 
-Aplikacja wykorzystuje biblioteki:
--- QGIS
--- NumPy
--- Pandas
+Aplikacja wykorzystuje biblioteki: 
+<ul>
+<li>QGIS</li>
+<li>NumPy</li>
+<li>Pandas</li>
+</ul>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
