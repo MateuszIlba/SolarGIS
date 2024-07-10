@@ -33,7 +33,7 @@ W celu uruchomienia apllikacji wymagana jest instalacja aplikacji QGIS w wersji 
 ### Installation
 
 Aby zainstalować plugin należy otworzyć okno Processing Toolbox i otworzyć skrypt:<br><br>
-![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/ea75490a-5680-4c1b-901a-20a9de189bec)<br><br>
+<p align="center">![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/ea75490a-5680-4c1b-901a-20a9de189bec)<br><br></p>
 Skrypt aplikacji będzie widoczny w zakładce Scripts:<br><br>
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/8dfe83c6-0e0f-42d2-bc25-a99125849560)<br><br>
 Po dodaniu skrytpu Python można uruchomić aplikację klikając dwyukrotnie na nazwę SolarGIS
@@ -41,6 +41,9 @@ Po dodaniu skrytpu Python można uruchomić aplikację klikając dwyukrotnie na 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
+![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/6abd2d56-1498-4245-90d5-5f45b2aa501d)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
