@@ -43,14 +43,14 @@ Po dodaniu skrytpu Python można uruchomić aplikację klikając dwyukrotnie na 
 
 Po otwarciu aplikacji uruchamia się GUI w którym można ustawić parametry analizy:<br><br>
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/6abd2d56-1498-4245-90d5-5f45b2aa501d)<br><br>
-Główne ustawienia aplikacji:<br>
- `Input layer` - warstwa w obrębie której będzie odbywała się analiza, można użyć tylko zaznaczonych elementów zaznaczając pole wyboru pod warstwą wejściową<br>
- `ID field` - pole w tabeli atrybutów z unikalnym ID - ma na celu ewentualne złączenie wyników z danymi źródłowymi - wybrane ID zostaną dopisane do obiektów podlegających processingowi<br>
- `EPW file` - plik EPW który będzie wykorzystywany jako źródło o modelowym średniorocznym nasłonecznieniu. Należy wczytać plik EPW z lokalizacji możliwie jak najbliższej obiektom podlegającym analizie. Pliki EPW dla lokalizacji dla całego świata można pobrać np. z strony <a href="https://www.ladybug.tools/epwmap/">ladybug.tools/epwmap</a><br>
- `Ground albedo` - poziom odbicia promieni słonecznych od podłoża wokół analizowanej lokalizacji. Wartość powinna zawierać się w wartościach od 0 do 1, im większa wartość tym większe odbijanie promieniowania słonecznego. Domyślna wartość `0.2` reprezentuje odbicie szacowane dla obszaru miejskiego<br>
- `Time Zone` - strefa czasowa dla analizowanej lokalizacji, wartość od -12 do 12 w zależności od strefy czasowej <br>
- Użytkownik może wybrać, czy zapisać dane pochodzące z wstępnych obliczeń do wynikowego pliku, między innymi `azimuth`, `tilt angle` oraz `real 3D area`. Domyślnie zapisywane są wszystkie informacje. <br>
- `Output layer` - wynikowa warstwa po korekcji nasłonecznienia, domyślnie wynik zapisywany jest jako warstwa tymczasowa, można zdefiniować zapis wyniku do określonego pliku warstwy przestrzennej lub bazodanowej (obsługiwanej przez QGIS). Warstwa zostanie automatycznie dodana do mapy po przeprowadzeniu obliczeń.
+Główne ustawienia aplikacji:<br><br>
+ `Input layer` - warstwa w obrębie której będzie odbywała się analiza, można użyć tylko zaznaczonych elementów zaznaczając pole wyboru pod warstwą wejściową<br><br>
+ `ID field` - pole w tabeli atrybutów z unikalnym ID - ma na celu ewentualne złączenie wyników z danymi źródłowymi - wybrane ID zostaną dopisane do obiektów podlegających processingowi<br><br>
+ `EPW file` - plik EPW który będzie wykorzystywany jako źródło o modelowym średniorocznym nasłonecznieniu. Należy wczytać plik EPW z lokalizacji możliwie jak najbliższej obiektom podlegającym analizie. Pliki EPW dla lokalizacji dla całego świata można pobrać np. z strony <a href="https://www.ladybug.tools/epwmap/">ladybug.tools/epwmap</a><br><br>
+ `Ground albedo` - poziom odbicia promieni słonecznych od podłoża wokół analizowanej lokalizacji. Wartość powinna zawierać się w wartościach od 0 do 1, im większa wartość tym większe odbijanie promieniowania słonecznego. Domyślna wartość `0.2` reprezentuje odbicie szacowane dla obszaru miejskiego<br><br>
+ `Time Zone` - strefa czasowa dla analizowanej lokalizacji, wartość od -12 do 12 w zależności od strefy czasowej <br><br>
+ Użytkownik może wybrać, czy zapisać dane pochodzące z wstępnych obliczeń do wynikowego pliku, między innymi `azimuth`, `tilt angle` oraz `real 3D area`. Domyślnie zapisywane są wszystkie informacje. <br><br>
+ `Output layer` - wynikowa warstwa po korekcji nasłonecznienia, domyślnie wynik zapisywany jest jako warstwa tymczasowa, można zdefiniować zapis wyniku do określonego pliku warstwy przestrzennej lub bazodanowej (obsługiwanej przez QGIS). Warstwa zostanie automatycznie dodana do mapy po przeprowadzeniu obliczeń.<br>
  
 
 
