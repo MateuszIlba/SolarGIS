@@ -47,6 +47,7 @@ Po dodaniu skrytpu Python można uruchomić aplikację klikając dwyukrotnie na 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
+Aplikacja udostępniana jest na podstawie licencji GNU General Public License v2.0
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
