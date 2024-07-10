@@ -17,7 +17,7 @@ W wersji 2.0 aplikacji planowane jest dodanie mozliwości podziału płaszczyzn 
 
 ### Built With
 
-Aplikacja wykorzystuje biblioteki: 
+Aplikacja wykorzystuje oprogramowanie i biblioteki: 
 <ul>
 <li>QGIS</li>
 <li>NumPy</li>
@@ -50,7 +50,7 @@ Główne ustawienia aplikacji:<br>
  `Ground albedo` - poziom odbicia promieni słonecznych od podłoża wokół analizowanej lokalizacji. Wartość powinna zawierać się w wartościach od 0 do 1, im większa wartość tym większe odbijanie promieniowania słonecznego. Domyślna wartość `0.2` reprezentuje odbicie szacowane dla obszaru miejskiego<br>
  `Time Zone` - strefa czasowa dla analizowanej lokalizacji, wartość od -12 do 12 w zależności od strefy czasowej <br>
  Użytkownik może wybrać, czy zapisać dane pochodzące z wstępnych obliczeń do wynikowego pliku, między innymi `azimuth`, `tilt angle` oraz `real 3D area`. Domyślnie zapisywane są wszystkie informacje. <br>
- `Output layer` - wynikowa warstwa po korekcji nasłonecznienia, 
+ `Output layer` - wynikowa warstwa po korekcji nasłonecznienia, domyślnie wynik zapisywany jest jako warstwa tymczasowa, można zdefiniować zapis wyniku do określonego pliku warstwy przestrzennej lub bazodanowej (obsługiwanej przez QGIS). Warstwa zostanie automatycznie dodana do mapy po przeprowadzeniu obliczeń.
  
 
 
