@@ -5,9 +5,14 @@
 
 ## About The Project
 
-Aplikacja ma na celu realizację obliczeń nasłonecznienia. W wersji 1.0 aplikacji stosowane są korekcje nasłonecznienia ze względu na pochylenie płaszczyzny 
+Aplikacja ma na celu realizację obliczeń nasłonecznienia na podstawie dowolnych danych przestrzennych w środowisku QGIS. W wersji 1.0 aplikacji stosowane są korekcje nasłonecznienia ze względu na pochylenie płaszczyzny i lokalizację. 
 
 ### Built With
+
+Aplikacja wykorzystuje biblioteki:
+-- QGIS
+-- NumPy
+-- Pandas
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
