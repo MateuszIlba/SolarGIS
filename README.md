@@ -58,41 +58,33 @@ Main application settings:<br><br>
 
 ## Example of how the application works
 
-Otwórz przykładowy zestaw danych obiektów 3D (warstwa several_buildings), do wykonania analizy nasłonecznienia rocznego potrzebny będzie również plik EPW z danymi pogodowymi stacji metoorologicznej znajdującej się najbliżej obszaru analizy (odpowiedni plik pasujący do danych przestrzennych znajduje się w katalogu example_dataset). Inne pliki EPW można znaleźć w wyszukiwarce: <a href="https://www.ladybug.tools/epwmap/"> https://www.ladybug.tools/epwmap/ </a>
+To conduct an annual solar radiation analysis, open the sample 3D building dataset (layer: several_buildings). You will also require an EPW (EnergyPlus Weather) file containing meteorological data from the weather station nearest to the area of interest. A suitable EPW file, compatible with the spatial data, is located in the example_dataset directory. Additional EPW files can be obtained through an online search: <a href="https://www.ladybug.tools/epwmap/"> https://www.ladybug.tools/epwmap/ </a>
 
 ![dataset](https://github.com/user-attachments/assets/7420b8b6-7a99-4e11-b43e-4abc5282c807)
 
-Ważne! przy wykorzystaniu przykładowego zbioru danych z pełnym modelem 3D należy odznaczyć filtrowanie geometrii obiektów:
+Note: If you are using the sample dataset with the complete 3D model, you must disable the object geometry filter:
 
 ![ustawianiepliku](https://github.com/user-attachments/assets/bd1c209d-1b28-42bc-862d-144217665bdd)
 ![ustawianiepliku2](https://github.com/user-attachments/assets/fae23552-1119-48da-bad2-a90d1a222350)
 
-Niezaznaczenie tej opcji spowoduje błąd geometrii obiektów pionowych (QGIS testuje geometrię jedynie po współrzędnych XY 2D i w przypadku poligonu prostokątnego idealnie pionowego znajdzie jedynie 2 różne punkty, które nie tworzą poligonu 2D).
-
-Przy pełnym eksporcie obliczanych informacji narzędzie SolarGIS powinno być ustawione:
+This option must be enabled to ensure correct geometry for vertical objects. QGIS performs geometry checks based on 2D XY coordinates. If a perfectly vertical rectangular polygon is exported without this option enabled, QGIS will only detect two distinct points, which are insufficient to define a 2D polygon, resulting in a geometry error. To ensure a complete export of all calculated data, verify that the SolarGIS tool is configured appropriately:
 
 ![ustawianiepliku3](https://github.com/user-attachments/assets/b5f11c20-4055-40aa-acf6-30779f65a770)
 
-Po ustawieniu klikamy przycisk Run.
-
-Wynik można zwizualizować tradycyjnie w 2D lub w 3D. Do wizualizacji trójwymiarowej polecam użycie wtyczki  <a href="https://plugins.qgis.org/plugins/Qgis2threejs/"> Qgis2threejs </a>
+After configuring the settings, click the Run button to execute the process. The results can be visualized in either 2D or 3D. For enhanced 3D visualization, it is recommended to use the  <a href="https://plugins.qgis.org/plugins/Qgis2threejs/"> Qgis2threejs </a> plugin.
 
 ![wynik](https://github.com/user-attachments/assets/9042c79b-2bca-4bb4-b51f-79f1de279b2c)
 
-
-
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Planowane prace
+## Planned software updates and enhancements
 
-Zapraszam do współpracy w celu ulepszania narzędzia. Aktualnie w planach jest dodanie kilka funkcjonalności, między innymi:
+We invite you to collaborate with us on improving this tool. We are currently planning to add several new features, including:
 <ul>
-<li>Zmarginalizowanie topologi obiektów idealnie pionowych i weryfikacja prawidłowej normalnej takich płaszczyzn</li>
-<li>uwzględnianie zacienienia (przez numeryczny model pokrycia terenu oraz sąsiadujące obiekty 3D)</li>
-<li>dodanie wyboru okresu dla jakiego będzie wykonywana analiza (dzień, miesiąc, rok)</li>
-<li>dodanie mozliwości podziału płaszczyzn poprzez zdefiniowaną siatkę w celu zagęszczenia dokładności analizy</li>
+<li>Optimizing the topology of ideally vertical objects and validating the accuracy of their surface normals</li>
+<li>uShading analysis is performed using a digital terrain model (DTM) and 3D models of surrounding objects</li>
+<li>Implement a feature to allow users to specify the time range for analysis, with options for daily, monthly, or annual data aggregation</li>
+<li>The ability to divide planes using a defined grid will be added to enhance the accuracy of analyses</li>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
