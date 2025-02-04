@@ -91,11 +91,9 @@ We invite you to collaborate with us on improving this tool. We are currently pl
 
 ## License
 Distributed under the GNU General Public License v2.0. See file LICENSE for more information.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
 Mateusz Ilba - ilbam@uek.krakow.pl
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Acknowledgments
 This plugin present the result of the Project no 019/ZII/2024/POT financed from the subsidy granted to the Krakow University of
