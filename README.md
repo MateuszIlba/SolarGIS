@@ -13,7 +13,7 @@ Główne cechy aplikacji:<br>
   <li>uwzględnianie w obliczeniach korekcji dla trzech składowych nasłonecznienia: bezpośredniego, rozproszonego oraz odbitego</li>
   <li>możliwość dowolnej wizualizacji wyników a trakże możliwość eksportu obliczeń do dowolnego pliku obsługiwanego przez QGIS</li>
 </ul><br>
-W wersji 2.0 aplikacji planowane jest dodanie mozliwości podziału płaszczyzn poprzez zdefiniowaną siatkę w celu zagęszczenia dokładności analizy oraz uwzględnianie zacienienia (przez numeryczny model pokrycia terenu oraz sąsiadujące obiekty 3D).
+
 
 ### Built With
 
@@ -40,6 +40,10 @@ Po dodaniu skrytpu Python można uruchomić aplikację klikając dwyukrotnie na 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
+
+Aplikacja oblicza nasł☺onecznienie na dowolnych płaszczyznach zapisanych w pliku wektorowym 3D, który można otworzyć w QGIS jako poligon. 
+Wersja 1.0 aplikacji została zweryfikowana w odniesieniu do komercyjnych aplikacji obliczających nasłonecznienie dla płaszczyzn pochyłych i bez zacieniania.
+W przypadku płaszczyzn idealnie pionowych aktualnie wyniki mogą być w określonych sytuacjach błędne z uwagi na topologię poligonów i kierunek zapisu obwiedni (wiąże to się z odpowiednim określeniem normalnej do poligonu).
 
 Po otwarciu aplikacji uruchamia się GUI w którym można ustawić parametry analizy:<br><br>
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/6abd2d56-1498-4245-90d5-5f45b2aa501d)<br><br>
@@ -75,10 +79,23 @@ Po ustawieniu klikamy przycisk Run.
 
 Wynik można zwizualizować tradycyjnie w 2D lub w 3D. Do wizualizacji trójwymiarowej polecam użycie wtyczki  <a href="https://plugins.qgis.org/plugins/Qgis2threejs/"> Qgis2threejs </a>
 
+![wynik](https://github.com/user-attachments/assets/9042c79b-2bca-4bb4-b51f-79f1de279b2c)
 
 
 
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Planowane prace
+
+Zapraszam do współpracy w celu ulepszania narzędzia. Aktualnie w planach jest dodanie kilka funkcjonalności, między innymi:
+<ul>
+<li>Zmarginalizowanie topologi obiektów idealnie pionowych i weryfikacja prawidłowej normalnej takich płaszczyzn</li>
+<li>uwzględnianie zacienienia (przez numeryczny model pokrycia terenu oraz sąsiadujące obiekty 3D)</li>
+<li>dodanie wyboru okresu dla jakiego będzie wykonywana analiza (dzień, miesiąc, rok)</li>
+<li>dodanie mozliwości podziału płaszczyzn poprzez zdefiniowaną siatkę w celu zagęszczenia dokładności analizy</li>
+</ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
