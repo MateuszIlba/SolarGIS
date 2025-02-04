@@ -52,7 +52,7 @@ Główne ustawienia aplikacji:<br><br>
  Użytkownik może wybrać, czy zapisać dane pochodzące z wstępnych obliczeń do wynikowego pliku, między innymi `azimuth`, `tilt angle` oraz `real 3D area`. Domyślnie zapisywane są wszystkie informacje. <br><br>
  `Output layer` - wynikowa warstwa po korekcji nasłonecznienia, domyślnie wynik zapisywany jest jako warstwa tymczasowa, można zdefiniować zapis wyniku do określonego pliku warstwy przestrzennej lub bazodanowej (obsługiwanej przez QGIS). Warstwa zostanie automatycznie dodana do mapy po przeprowadzeniu obliczeń.<br>
  
-###Example
+### Example
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
