@@ -5,19 +5,19 @@
 
 ## About The Project
 
-Aplikacja ma na celu realizację obliczeń nasłonecznienia na podstawie dowolnych danych przestrzennych 3D oraz danych pogodowych (w formacie EPW) w środowisku QGIS. Aplikacja działa w środowisku otwartego oprogramowania QGIS. W wersji 1.0 aplikacji stosowane są korekcje nasłonecznienia uwzględniające pochylenie płaszczyzny i jej azymut. Aplikacja umożliwia również obliczenie realnej powierzchni danej płaszczyzny 3D. <br>
-Główne cechy aplikacji:<br>
+This QGIS plugin calculates solar irradiance based on arbitrary 3D geometry and EPW weather data. Built on the open-source QGIS platform, version 1.0 incorporates solar radiation adjustments for surface tilt and azimuth. Additionally, the plugin computes the true surface area of a given 3D plane.<br>
+This application is characterized by the following key features:<br>
 <ul>
-  <li>obliczanie realnego nasłonecznienia płaszczyzny na podstawie danych pogodowych (EPW)</li>
-  <li>skalowalność obliczeń dla dowolnej liczby płaszczyzn</li>
-  <li>uwzględnianie w obliczeniach korekcji dla trzech składowych nasłonecznienia: bezpośredniego, rozproszonego oraz odbitego</li>
-  <li>możliwość dowolnej wizualizacji wyników a trakże możliwość eksportu obliczeń do dowolnego pliku obsługiwanego przez QGIS</li>
+  <li>determination of real-time solar irradiation on a given plane using meteorological data (EPW)</li>
+  <li>computationally scalable across an arbitrary number of planes</li>
+  <li>when calculating solar radiation, corrections should be made for the three components: direct, diffuse, and reflected</li>
+  <li>the results can be visualized in any way desired, and the calculations can be exported to any file format supported by QGIS</li>
 </ul><br>
 
 
 ### Built With
 
-Aplikacja wykorzystuje oprogramowanie i biblioteki: 
+The application utilizes software and libraries: 
 <ul>
 <li>QGIS</li>
 <li>NumPy</li>
@@ -28,33 +28,31 @@ Aplikacja wykorzystuje oprogramowanie i biblioteki:
 ## Getting Started
 ### Prerequisites
 
-W celu uruchomienia apllikacji wymagana jest instalacja aplikacji QGIS w wersji 3.34 lub nowszej. Najnowszą wersję można pobrać <a href="https://qgis.org/en/site/forusers/download.html">z tej strony</a>
+To run this application, you need to have QGIS version 3.34 or later installed on your computer. You can download the latest version from <a href="https://qgis.org/en/site/forusers/download.html"> this website </a>
 
 ### Installation
 
-Aby zainstalować plugin należy otworzyć okno Processing Toolbox i otworzyć skrypt:<br><br>
+To install the plugin, open the Processing Toolbox window and open the script:<br><br>
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/ea75490a-5680-4c1b-901a-20a9de189bec)<br><br>
-Skrypt aplikacji będzie widoczny w zakładce Scripts:<br><br>
+The application script can be found in the Scripts tab:<br><br>
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/8dfe83c6-0e0f-42d2-bc25-a99125849560)<br><br>
-Po dodaniu skrytpu Python można uruchomić aplikację klikając dwyukrotnie na nazwę SolarGIS
+Once the Python script has been added, the application can be launched by double-clicking the SolarGIS executable
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
 
-Aplikacja oblicza nasł☺onecznienie na dowolnych płaszczyznach zapisanych w pliku wektorowym 3D, który można otworzyć w QGIS jako poligon. 
-Wersja 1.0 aplikacji została zweryfikowana w odniesieniu do komercyjnych aplikacji obliczających nasłonecznienie dla płaszczyzn pochyłych i bez zacieniania.
-W przypadku płaszczyzn idealnie pionowych aktualnie wyniki mogą być w określonych sytuacjach błędne z uwagi na topologię poligonów i kierunek zapisu obwiedni (wiąże to się z odpowiednim określeniem normalnej do poligonu).
+This application calculates solar radiation on arbitrary planes defined in a 3D vector file, compatible with QGIS as polygon layers. Version 1.0 has undergone validation against established commercial software for solar radiation analysis on inclined planes under direct solar radiation. Currently, results for vertical planes may be inaccurate due to polygon topology and the winding order of vertices, which affects the calculation of the polygon's normal vector.
 
-Po otwarciu aplikacji uruchamia się GUI w którym można ustawić parametry analizy:<br><br>
+Upon launching the application, the graphical user interface (GUI) is displayed, enabling users to configure the analysis parameters:<br><br>
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/6abd2d56-1498-4245-90d5-5f45b2aa501d)<br><br>
-Główne ustawienia aplikacji:<br><br>
- `Input layer` - warstwa w obrębie której będzie odbywała się analiza, można użyć tylko zaznaczonych elementów zaznaczając pole wyboru pod warstwą wejściową<br><br>
- `ID field` - pole w tabeli atrybutów z unikalnym ID - ma na celu ewentualne złączenie wyników z danymi źródłowymi - wybrane ID zostaną dopisane do obiektów podlegających processingowi<br><br>
- `EPW file` - plik EPW który będzie wykorzystywany jako źródło o modelowym średniorocznym nasłonecznieniu. Należy wczytać plik EPW z lokalizacji możliwie jak najbliższej obiektom podlegającym analizie. Pliki EPW dla lokalizacji dla całego świata można pobrać np. z strony <a href="https://www.ladybug.tools/epwmap/">ladybug.tools/epwmap</a><br><br>
- `Ground albedo` - poziom odbicia promieni słonecznych od podłoża wokół analizowanej lokalizacji. Wartość powinna zawierać się w wartościach od 0 do 1, im większa wartość tym większe odbijanie promieniowania słonecznego. Domyślna wartość `0.2` reprezentuje odbicie szacowane dla obszaru miejskiego<br><br>
- `Time Zone` - strefa czasowa dla analizowanej lokalizacji, wartość od -12 do 12 w zależności od strefy czasowej <br><br>
- Użytkownik może wybrać, czy zapisać dane pochodzące z wstępnych obliczeń do wynikowego pliku, między innymi `azimuth`, `tilt angle` oraz `real 3D area`. Domyślnie zapisywane są wszystkie informacje. <br><br>
- `Output layer` - wynikowa warstwa po korekcji nasłonecznienia, domyślnie wynik zapisywany jest jako warstwa tymczasowa, można zdefiniować zapis wyniku do określonego pliku warstwy przestrzennej lub bazodanowej (obsługiwanej przez QGIS). Warstwa zostanie automatycznie dodana do mapy po przeprowadzeniu obliczeń.<br>
+Main application settings:<br><br>
+ `Input layer` - The layer within which the analysis will be performed, can only use the selected elements by checking the box under the input layer<br><br>
+ `ID field` - The unique ID field in the attribute table facilitates the potential integration of results with source data. The selected IDs will be appended to the objects undergoing processing<br><br>
+ `EPW file` - The EPW file, which will be used as a source of model average annual solar radiation, should be loaded. The EPW file should be loaded from a location as close as possible to the objects being analyzed. EPW files for locations around the world can be downloaded, for example, from the website <a href="https://www.ladybug.tools/epwmap/">ladybug.tools/epwmap</a><br><br>
+ `Ground albedo` - Solar reflectance of the ground surface in the vicinity of the analyzed location. This dimensionless value ranges from 0 to 1, where higher values indicate greater reflectivity. A default value of `0.2` is representative of an urban environment<br><br>
+ `Time Zone` - The time zone of the location under analysis, expressed as an integer between -12 and 12 inclusive, corresponding to the respective time zone <br><br>
+ The user has the option to save data from preliminary calculations to the output file, among options `azimuth`, `tilt angle` and `real 3D area`. By default, all information is saved. <br><br>
+ `Output layer` - The corrected solar insolation layer is, by default, saved as a temporary layer.  Alternatively, you can specify a spatial file or database (compatible with QGIS) for persistent storage. The layer will be automatically added to the map upon completion of the calculations<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
