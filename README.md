@@ -51,8 +51,33 @@ Główne ustawienia aplikacji:<br><br>
  `Time Zone` - strefa czasowa dla analizowanej lokalizacji, wartość od -12 do 12 w zależności od strefy czasowej <br><br>
  Użytkownik może wybrać, czy zapisać dane pochodzące z wstępnych obliczeń do wynikowego pliku, między innymi `azimuth`, `tilt angle` oraz `real 3D area`. Domyślnie zapisywane są wszystkie informacje. <br><br>
  `Output layer` - wynikowa warstwa po korekcji nasłonecznienia, domyślnie wynik zapisywany jest jako warstwa tymczasowa, można zdefiniować zapis wyniku do określonego pliku warstwy przestrzennej lub bazodanowej (obsługiwanej przez QGIS). Warstwa zostanie automatycznie dodana do mapy po przeprowadzeniu obliczeń.<br>
- 
-### Example
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Example of how the application works
+
+Otwórz przykładowy zestaw danych obiektów 3D (warstwa several_buildings), do wykonania analizy nasłonecznienia rocznego potrzebny będzie również plik EPW z danymi pogodowymi stacji metoorologicznej znajdującej się najbliżej obszaru analizy (odpowiedni plik pasujący do danych przestrzennych znajduje się w katalogu example_dataset). Inne pliki EPW można znaleźć w wyszukiwarce: <a href="https://www.ladybug.tools/epwmap/"> https://www.ladybug.tools/epwmap/ </a>
+
+![dataset](https://github.com/user-attachments/assets/7420b8b6-7a99-4e11-b43e-4abc5282c807)
+
+Ważne! przy wykorzystaniu przykładowego zbioru danych z pełnym modelem 3D należy odznaczyć filtrowanie geometrii obiektów:
+
+![ustawianiepliku](https://github.com/user-attachments/assets/bd1c209d-1b28-42bc-862d-144217665bdd)
+![ustawianiepliku2](https://github.com/user-attachments/assets/fae23552-1119-48da-bad2-a90d1a222350)
+
+Niezaznaczenie tej opcji spowoduje błąd geometrii obiektów pionowych (QGIS testuje geometrię jedynie po współrzędnych XY 2D i w przypadku poligonu prostokątnego idealnie pionowego znajdzie jedynie 2 różne punkty, które nie tworzą poligonu 2D).
+
+Przy pełnym eksporcie obliczanych informacji narzędzie SolarGIS powinno być ustawione:
+
+![ustawianiepliku3](https://github.com/user-attachments/assets/b5f11c20-4055-40aa-acf6-30779f65a770)
+
+Po ustawieniu klikamy przycisk Run.
+
+Wynik można zwizualizować tradycyjnie w 2D lub w 3D. Do wizualizacji trójwymiarowej polecam użycie wtyczki  <a href="https://plugins.qgis.org/plugins/Qgis2threejs/"> Qgis2threejs </a>
+
+
+
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
