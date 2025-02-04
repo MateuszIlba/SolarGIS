@@ -82,7 +82,7 @@ After configuring the settings, click the Run button to execute the process. The
 We invite you to collaborate with us on improving this tool. We are currently planning to add several new features, including:
 <ul>
 <li>Optimizing the topology of ideally vertical objects and validating the accuracy of their surface normals</li>
-<li>uShading analysis is performed using a digital terrain model (DTM) and 3D models of surrounding objects</li>
+<li>Shading analysis, performed using a digital terrain model (DTM) and 3D models of surrounding objects</li>
 <li>Implement a feature to allow users to specify the time range for analysis, with options for daily, monthly, or annual data aggregation</li>
 <li>The ability to divide planes using a defined grid will be added to enhance the accuracy of analyses</li>
 </ul>
