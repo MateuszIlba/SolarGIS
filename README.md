@@ -58,8 +58,8 @@ Main application settings:<br><br>
 
 ## Example of how the application works
 
-To conduct an annual solar radiation analysis, open the sample 3D building dataset (layer: several_buildings). 
-It is important to note that to visualize data beyond a flat 2D map, a 3D view must be activated. This requires prior modification of the layer's view style to ensure objects are correctly rendered in three dimensions. Based on experience, I recommend using the Qgis2threejs plugin for 3D visualization. Once the plugin is active, simply enabling the 3D visibility of the relevant building layer is sufficient.
+To conduct an annual solar radiation analysis, open the sample 3D building dataset (layer: several_buildings). <br>
+`It is important to note that to visualize data beyond a flat 2D map, a 3D view must be activated. This requires prior modification of the layer's view style to ensure objects are correctly rendered in three dimensions. Based on experience, I recommend using the Qgis2threejs plugin for 3D visualization. Once the plugin is active, simply enabling the 3D visibility of the relevant building layer is sufficient.` <br>
 You will also require an EPW (EnergyPlus Weather) file containing meteorological data from the weather station nearest to the area of interest. A suitable EPW file, compatible with the spatial data, is located in the example_dataset directory. Additional EPW files can be obtained through an online search: <a href="https://www.ladybug.tools/epwmap/"> https://www.ladybug.tools/epwmap/ </a>
 
 ![dataset](https://github.com/user-attachments/assets/7420b8b6-7a99-4e11-b43e-4abc5282c807)
