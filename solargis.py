@@ -11,16 +11,19 @@
 *                                                                         *
 ***************************************************************************
 """
-
+from typing import Any, Optional
 from qgis.PyQt.QtCore import QCoreApplication
 from qgis.core import (QgsProcessing,
                        QgsFeatureSink,
                        QgsProcessingException,
                        QgsProcessingAlgorithm,
+                       QgsProcessingContext,
+                       QgsProcessingFeedback, #
+                       QgsFeatureRequest, 
                        QgsProject,
-                       QgsCoordinateReferenceSystem,###
-                       QgsCoordinateTransform,###
-                       QgsPoint, #########
+                       QgsCoordinateReferenceSystem,#
+                       QgsCoordinateTransform,#
+                       QgsPoint, #
                        QgsProcessingParameterFeatureSource,
                        QgsProcessingParameterFeatureSink,
                        QgsProcessingParameterFile,
@@ -214,13 +217,14 @@ class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
         Currently, the algorithm has undergone validation for the northern hemisphere [N].")
 
 ###################inputs and output############################################
-    def initAlgorithm(self, config=None):
+    def initAlgorithm(self, config: Optional[dict[str, Any]] = None):#config=None):
         self.addParameter(
             QgsProcessingParameterFeatureSource(
                 self.INPUT,
                 self.tr('Input layer'),
                 [QgsProcessing.TypeVectorAnyGeometry]
             )
+            
         )
         
         self.addParameter(
@@ -245,7 +249,7 @@ class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
             QgsProcessingParameterNumber(
                 self.ALBEDO,
                 self.tr('Ground albedo (0 to 1)'),
-                type=1,
+                type=QgsProcessingParameterNumber.Double,
                 defaultValue=0.2
             )
         )
@@ -254,7 +258,7 @@ class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
             QgsProcessingParameterNumber(
                 self.UTCZONE,
                 self.tr('Time Zone (-12 to 12 )'),
-                type=0,
+                type=QgsProcessingParameterNumber.Double,
                 defaultValue=1
             )
         )
@@ -294,7 +298,13 @@ class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
             )
         )
 
-    def processAlgorithm(self, parameters, context, feedback):
+    def processAlgorithm(
+        self,
+        parameters: dict[str, Any],
+        context: QgsProcessingContext,
+        feedback: QgsProcessingFeedback,
+    ) -> dict[str, Any]:
+        
         global gamma, szerokoscgeograficzna, beta, pg, UTCZONE, n, dlugoscgeograficzna # global variable for analyses 
         source = self.parameterAsSource(
             parameters,
@@ -349,20 +359,25 @@ class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
         ################################################################################
         # Compute the number of steps to display within the progress bar and get features from source
         total = 100.0 / source.featureCount() if source.featureCount() else 0
-        features = source.getFeatures()
+        try:
+            features = source.getFeatures()
+        except:
+            feedback.pushInfo(' Please fix the geometry or change the Invalid features filtering')
         for current, feature in enumerate(features):
             if feedback.isCanceled():# Stop the algorithm if cancel button has been clicked
                 break
         ################################# calculate geodetic azimuth and tilt angle################################
             #########finding the best 3 points representing the surface#########
-            geom = feature.geometry()
+            try:
+                geom = feature.geometry()
+            except:
+                break
             verticess=geom.vertices()
             points = []
             for v in verticess: #remove duplicates vertices
                 point=[v.x(), v.y(), v.z()]
                 if point not in points:
                     points.append(point)
-                    
                     
                     
                     
@@ -473,3 +488,6 @@ class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
             sink.addFeature(feat, QgsFeatureSink.FastInsert) 
             feedback.setProgress(int(current * total))# Update the progress bar
         return {self.OUTPUT: dest_id}
+    
+    def createInstance(self):
+        return self.__class__()
