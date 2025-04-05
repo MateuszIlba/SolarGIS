@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-# SolarGIS
+# SolarQGIS
 
 ![k](https://github.com/MateuszIlba/SolarGIS/assets/50248287/d9d6daaa-2d57-4d85-86fd-9b65845d82c4)
 
@@ -36,7 +36,7 @@ To install the plugin, open the Processing Toolbox window and open the script:<b
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/ea75490a-5680-4c1b-901a-20a9de189bec)<br><br>
 The application script can be found in the Scripts tab:<br><br>
 ![image](https://github.com/MateuszIlba/SolarGIS/assets/50248287/8dfe83c6-0e0f-42d2-bc25-a99125849560)<br><br>
-Once the Python script has been added, the application can be launched by double-clicking the SolarGIS executable
+Once the Python script has been added, the application can be launched by double-clicking the SolarQGIS executable
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
