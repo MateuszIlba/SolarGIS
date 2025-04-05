@@ -201,13 +201,13 @@ class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
     def createInstance(self):
         return ExampleProcessingAlgorithm()
     def name(self):
-        return 'SolarGIS'
+        return 'SolarQGIS'
     def displayName(self):
-        return self.tr('SolarGIS')
+        return self.tr('SolarQGIS')
     def group(self):
-        return self.tr('SolarGIS')
+        return self.tr('SolarQGIS')
     def groupId(self):
-        return 'SolarGIS'
+        return 'SolarQGIS'
     def shortHelpString(self):
         return self.tr("The algorithm computes the geodetic azimuth, tilt of the 3D plane and annual insolation based on them. \
         Load the data for calculating insolation in the *.epw extension. Shading is not taken into consideration by the algorithm. \n \
